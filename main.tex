@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{10pt}
+
+\usepackage{arxiv}
+
+\usepackage{graphicx}
+\usepackage{indentfirst,csquotes}
+\usepackage{amssymb,amsthm,amsmath}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{enumitem}
+\usepackage{lmodern}
+\usepackage{fancyhdr}
+
+% rewrite font for compiling warning
+\usepackage{times}
+% rewrite page head
+\rhead{}
+
+% \topmargin= .5cm
+% \textheight= 20cm
+% \textwidth= 32cc
+% \baselineskip=16pt
+% \evensidemargin= .9cm
+% \oddsidemargin= .9cm
+
+
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyfoot[C]{\thepage}
+% \renewcommand{\headrulewidth}{0pt}
+
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=black,
+  urlcolor=blue
+}
+
+
+\begin{document}
+
+\title{
+Sentiment of movie review analysis by Random forest, LSTM and Bert
+}
+
+\author{
+Xinfang Li(1591669), Xueyan Hu(1586157), Jia Zhang (1578438)
+}
+\date{\today}
+
+\maketitle
+\markboth{}{}
+
+\begin{abstract}
+% importance and challenge
+% introduce ML and DL
+% introduce datasets
+% summary the results
+Sentiment analysis plays a critical role for figuring out the meaningful information from movie reviews. Its ability is to process vast amounts of data collected from social media, review websites and personal blogs and get the emotional tendency behind the words, then, the process transforms the opinions into quantifiable data offering insights of audience preferences and the trends of the market. The analysis results are valuable for filmmakers and distributors of movie to adapt their strategies to attract more audience. However, the challenges significantly impact the tasks implementation, such as processing huge data collections. So, this project introduces machine learning (ML) and deep learning (DL) methods, including Random Forest classifier, Long- Short-Term Memory (LSTM) and Bidirectional Encoder Representations from Transformers (BERT), to handle this challenge. The Standford IMDB dataset from HuggingFace was used for training and to evaluate the performance by accuracy, classification report and confusion matrix. The models achieves the accuracy by 85.3\%, 85.5\% and 94.07\% respectively for sentiment classification.
+\end{abstract}
+
+\clearpage
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+
+\clearpage
+\setcounter{page}{1}
+
+% introduction
+\input{sections/intro.tex}
+
+% methods
+\input{sections/method_rf.tex}
+\input{sections/method_lstm.tex}
+\input{sections/method_bert.tex}
+\input{sections/final_compare.tex}
+
+
+\clearpage
+\bibliographystyle{ieeetr}
+\bibliography{ref}
+
+\end{document}
+
