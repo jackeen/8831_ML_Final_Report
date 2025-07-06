@@ -78,12 +78,12 @@ The implementation of this sentiment analysis project is fully contained, which 
 \subsection{Results of random forest}
 In this section, we demonstrate the experimental data, which is gained from training and evaluating the Random Forest classifier on the IMDb movie review dataset. These experimental results are discussed in standard metrics such as accuracy, precision, recall, F1-score and confusion matrix.
 
-After training, the model is evaluated on the preprocessed TF-IDF features of the unseen dataset. We gained the accuracy as 85.3\%, which shows that the Random Forest model is able to classify the sentiment of about 8.5 out of every 10 reviews correctly. Given the simplicity of the feature representation, this is a strong baseline.
+After training, the model is evaluated on the preprocessed TF-IDF features of the unseen dataset. We gained the accuracy as 85.4\%, which shows that the Random Forest model is able to classify the sentiment of about 8.5 out of every 10 reviews correctly. Given the simplicity of the feature representation, this is a strong baseline.
 
 \subsubsection{Classification Report}
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{pics/rf_eval_report_with_acc.png}
+    \includegraphics[width=0.6\textwidth]{pics/rf_accuracy_2.png}
     \caption{Classification Report of Random Forest}
 \end{figure}
 
@@ -96,7 +96,7 @@ This confusion matrix illustrates the predictions with true or false group numbe
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.4\textwidth]{pics/rf_eval_metrix.png}
+    \includegraphics[width=0.6\textwidth]{pics/rf_matrix_2.png}
     \caption{Confusion Matrix of Random Forest}
 \end{figure}
 

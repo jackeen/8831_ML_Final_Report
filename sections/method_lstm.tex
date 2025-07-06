@@ -12,10 +12,17 @@ LSTM can gain or drop information depend on it selection when a state of cell th
 \subsection{Model Architecture design}
 We built the LSTM model with the following steps: processed raw IMDb data into padded integer sequences, added embedding and LSTM layer to extract features, then regularized with dropout, and finally get sentiment classification through a sigmoid activated dense layer.
 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.3\textwidth]{pics/lstm_architecture_designed.png}
+    \caption{The architecture of LSTM}
+\end{figure}
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{pics/lstm_model.png}
-    \caption{The model review of LSTM}
+    \caption{The summary of LSTM}
 \end{figure}
 
 The pipeline began with raw IMDb reviews. We proprocessed the data by mapping each word into an integer index and then padding all sequences to a length of 300 tokens. This allowed the data to be trained efficiently in batches. Next we built an Embedding layer, which serves as the input layer. It transforms the integer-encoded vocabulary (limited to the 10,000 most frequent words) into dense, 128-dimensional vectors. This layer is crucial as it learns a meaningful, continuous representation for each word that captures semantic relationships within the vector space.
@@ -31,7 +38,7 @@ The classification report showed almost similar value of precision, recall, and 
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{pics/lstm_report.png}
+    \includegraphics[width=0.6\textwidth]{pics/lstm_report.png}
     \caption{The classification report of LSTM}
 \end{figure}
 
@@ -39,7 +46,7 @@ In the confusion matrix, the diagonal values (TN, TP) are much higher than off-d
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{pics/lstm_metrix.png}
+    \includegraphics[width=0.6\textwidth]{pics/lstm_metrix.png}
     \caption{The confusion matrix of LSTM}
 \end{figure}
 
@@ -48,7 +55,7 @@ In the "Accuracy on epochs" plot, the learning curve of the LSTM model is demons
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{pics/lstm_accuracy_s.png}
+    \includegraphics[width=0.6\textwidth]{pics/lstm_accuracy_s.png}
     \caption{Accuracy on epochs of LSTM}
 \end{figure}
 
